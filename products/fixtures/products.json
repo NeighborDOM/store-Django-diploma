@@ -1,0 +1,111 @@
+
+[
+  {
+    "model": "products.product",
+    "pk": 1,
+    "fields": {
+      "name": "Худі I'm Ukrainian",
+      "description": "Худі з національним патріотичним принтом. \nДля тих, хто полюбляє комфорт.",
+      "price": "1399.00",
+      "quantity": 10,
+      "image": "products_images/hoodie-1.jpg",
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 2,
+    "fields": {
+      "name": "Худі Різдвяна зірка",
+      "description": "Худі з національним патріотичним принтом. \nДля тих, хто полюбляє комфорт.",
+      "price": "1399.00",
+      "quantity": 10,
+      "image": "products_images/hoodie-2.jpg",
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 3,
+    "fields": {
+      "name": "Худі Новорічний кіт",
+      "description": "Худі з національним патріотичним принтом. \nДля тих, хто полюбляє комфорт.",
+      "price": "1399.00",
+      "quantity": 10,
+      "image": "products_images/hoodie-3.jpg",
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 4,
+    "fields": {
+      "name": "Футболка Український херсонський кавун",
+      "description": "Футболка з патріотичним принтом.",
+      "price": "500.00",
+      "quantity": 10,
+      "image": "products_images/t-shirt-3.jpg",
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "name": "Футболка Разом нас багато",
+      "description": "Футболка з патріотичним принтом.",
+      "price": "500.00",
+      "quantity": 10,
+      "image": "products_images/t-shirt-2.jpg",
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "name": "Футболка Україна для котів",
+      "description": "Футболка з патріотичним принтом.",
+      "price": "500.00",
+      "quantity": 10,
+      "image": "products_images/t-shirt-1.jpg",
+      "category": 1
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "name": "Черевики Clubshoes Хакі",
+      "description": "Стильні черевики Clubshoes в кольорі хакі.",
+      "price": "2799.00",
+      "quantity": 10,
+      "image": "products_images/shoes-1.jpg",
+      "category": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "name": "Тактичні черевики SAV Хакі",
+      "description": "Черевики тактичні Хакі, українського виробницта.",
+      "price": "2850.00",
+      "quantity": 10,
+      "image": "products_images/shoes-2.jpg",
+      "category": 3
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "name": "Черевики Clubshoes Бежеві",
+      "description": "Стильні черевики Clubshoes в бежевому кольорі.",
+      "price": "2799.00",
+      "quantity": 10,
+      "image": "products_images/shoes-3.jpg",
+      "category": 3
+    }
+  }
+]

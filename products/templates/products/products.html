@@ -16,7 +16,9 @@
             <h1 class="my-4">DOM's Store</h1>
             <div class="list-group">
                 {% for category in categories %}
-                    <a href="#" class="list-group-item">{{ category.name }}</a>
+                <a href="{% url 'products:category' category.pk %}" class="list-group-item">
+                    {{ category.name }}
+                </a>
                 {% endfor %}
             </div>
 
@@ -54,8 +56,8 @@
 
             <div class="row">
 
-                {% for product in products %}
-                    <div class="col-lg-4 col-md-6 mb-4">
+            {% for product in products %}
+                <div class="col-lg-4 col-md-6 mb-4">
                     <div class="card h-100">
                         <a href="#">
                             <img class="card-img-top"
@@ -66,28 +68,41 @@
                             <h4 class="card-title">
                                 <a href="#">{{ product.name }} </a>
                             </h4>
-                            <h5>{{ product.price }}</h5>
+                            <h5>{{ product.price }} грн.</h5>
                             <p class="card-text">{{ product.description }}</p>
                         </div>
                         <div class="card-footer text-center">
-                            <button type="button" class="btn btn-outline-success">Відправити до корзини</button>
+                            <a class="btn btn-outline-success"
+                               href="{% url 'products:basket_add' product.pk %}">
+                                Відправити до корзини
+                            </a>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+            {% endfor %}
 
             </div>
 
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    <li class="page-item {% if not products.has_previous %} disabled {% endif %}">
+                        <a class="page-link"
+                           href="{% if products.has_previous %} {% url 'products:paginator' products.previous_page_number %} {% else %} # {% endif %}"
+                           tabindex="-1" aria-disabled="true">
+                            Попередня
+                        </a>
                     </li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
+                    {% for page in products.paginator.page_range %}
+                        <li class="page-item">
+                            <a class="page-link" href="{% url 'products:paginator' page %}">
+                                {{ page }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                    <li class="page-item {% if not products.has_next %} disabled {% endif %}">
+                        <a class="page-link" href="{% if products.has_next %} {% url 'products:paginator' products.next_page_number %} {% else %} # {% endif %}">
+                            Наступна
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -102,7 +117,7 @@
 {% block footer %}
 <footer class="py-5 bg-dark">
     <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Store 2022</p>
+        <p class="m-0 text-center text-white">Copyright &copy; DOM's Store 2023</p>
     </div>
 </footer>
 {% endblock %}
