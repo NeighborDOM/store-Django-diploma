@@ -27,5 +27,5 @@ Python3 must be already installed
 
 ## Demo
 
-![demo.jpg](..%2F..%2FDownloads%2Fdemo.jpg)
+![demo.png](..%2F..%2FDownloads%2Fdemo.png)
 
