@@ -25,7 +25,7 @@ Python3 must be already installed
 * Purchase management from website interface
 * Powerful admin panel for advanced managing
 
-** Demo
+## Demo
 
 
 ![Website Interface](media%2Fdemo.jpg)
