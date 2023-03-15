@@ -4,7 +4,7 @@ My diploma project
 
 ## Check it out!
 
-[Store project deployed to Render] (PASTE_LINK_HERE)
+[Store project deployed to Render] (https://doms-store.onrender.com/)
 
 ## Installation
 
