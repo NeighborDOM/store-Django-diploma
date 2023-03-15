@@ -27,5 +27,5 @@ Python3 must be already installed
 
 ## Demo
 
-![demo.png](..%2F..%2FDownloads%2Fdemo.png)
+![Website Interface](demo.png)
 
